@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishikesh Nallam Portfolio</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+#main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fade-in-container 2s ease-in-out;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ff5722;
+    animation: slide-down 1.5s ease-out;
+}
+
+/* Sections */
+section {
+    margin: 20px 0;
+}
+
+section h2 {
+    color: #ff9800;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 5px;
+    animation: zoom-in 1s ease-in;
+}
+
+/* Animations */
+@keyframes fade-in-container {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in-container 2s ease-in-out;
+}
+
+.slide-in {
+    animation: slide-in 1.5s ease-in-out;
+}
+
+.zoom-in {
+    animation: zoom-in 1.2s ease-out;
+}
+
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <header>
+            <h1 class="fade-in">NALLAM RISHIKESH</h1>
+            <p class="slide-in">
+                Email: <a href="mailto:rishikittu87@gmail.com">rishikittu87@gmail.com</a> | Mobile: +91 9391801730
+            </p>
+            <p class="slide-in">
+                <a href="https://github.com/rishi0n1" target="_blank">GitHub</a> | 
+                <a href="https://linkedin.com/in/rishikesh-nallam" target="_blank">LinkedIn</a>
+            </p>
+        </header>
+
+        <section id="profile">
+            <h2 class="zoom-in">Profile Summary</h2>
+            <p class="slide-in">Versatile and solution-oriented professional with expertise in programming languages (C, Java), web development (HTML, CSS, 
+                JavaScript), and database management (MySQL). Strong analytical abilities demonstrated in developing an AI-based mass 
+                distribution system to optimize dynamic balance in high-speed mechanisms. Proficient in tools like Git and GitHub, VS code, with 
+                a collaborative mindset and a focus on teamwork. Excellent communication, problemsolving, and relationship-building skills ensure 
+                a high degree of customer satisfaction. Committed to delivering efficient, reliable, and innovative solutions for user needs.</p>
+        </section>
+
+        <section id="skills">
+            <h2 class="zoom-in">Skills</h2>
+            <ul class="slide-in">
+                <li>Programming: C, Basic Java</li>
+                <li>Web Development: HTML, CSS, JavaScript, Bootstrap</li>
+                <li>Database: MySQL</li>
+                <li>Tools: Git, GitHub, VS Code</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2 class="zoom-in">Projects</h2>
+            <p class="slide-in"><strong>AI-Based Mass Distribution in a Spatial Mechanism:</strong> Developed an AI-based mass distribution system to reduce shaking effects in spatial mechanisms using a parallelepiped 
+                model. The dynamic balancing of machinery is essential for good high-speed performance, a considerable amount of 
+                research on balancing of shaking force and shaking moments in spherical mechanisms has been carried out in recent 
+                years. Smoothness of operation is frequently a dominant consideration in design of high-speed machines, but most of 
+                the mechanisms are not naturally smooth in their operation. The project aimed to improve the dynamic balance of high speed machinery by minimizing shaking forces and moments <br>
+                <b>Role: Analysi</b> </section>
+
+        <section id="education">
+            <h2 class="zoom-in">Education</h2>
+            <ul class="slide-in">
+                <li>B.Tech in Mechanical Engineering - Kits Warangal (2019-2023), CGPA: 6.87</li>
+                <li>Intermediate - Narayana Group (2017-2019), Percentage: 91%</li>
+                <li>SSC - Fusco’s High School (2015-2017), CGPA: 9.0</li>
+            </ul>
+        </section>
+    </div>
+    <script>
+// Welcome message using BOM (alert)
+window.onload = function () {
+    alert("Welcome to Rishikesh's Portfolio!");
+};
+
+// Scroll animation using DOM
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.style.opacity = "1";
+            section.style.transform = "translateY(0)";
+        }
+    });
+});
+
+// Dynamic Date Display
+const footer = document.createElement("footer");
+footer.innerHTML = `<p style="text-align: center; margin-top: 20px;">&copy; ${new Date().getFullYear()} Rishikesh Nallam</p>`;
+document.body.appendChild(footer);
+
+    </script>
+</body>
+</html>
